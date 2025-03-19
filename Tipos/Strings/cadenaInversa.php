@@ -24,4 +24,12 @@
  * Si no quieres el modo estricto y prefieres que sea más relajado, pues comenta
  * la línea de abajo y listo, pa' que no joda.
  */
+declare(strict_types=1);
+
+function reverseString(string $text): string
+{
+    //Devolver lña cadena de teexto al revés, existen varias formas de hacerlo esta puede ser la mas facil 
+    return strrev($text);
+    //throw new BadFunctionCallException("Please implement the reverseString method!");
+}
 ?>
