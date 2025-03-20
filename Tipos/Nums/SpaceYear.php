@@ -1,4 +1,5 @@
 <?php
+
 /*Corre el año 2525 y acabas de emprender un viaje para visitar todos los planetas del Sistema Solar 
 (Mercurio, Venus, la Tierra, Marte, Júpiter, Saturno, Urano y Neptuno). La primera parada es Mercurio, 
 donde la aduana te exige rellenar un formulario (al parecer, la burocracia no es específica de la Tierra). 
@@ -37,8 +38,6 @@ declare(strict_types=1);
 
 class SpaceAge
 {
- 
- 
     private int $seconds;
     private float $secondsInEarthYear = 31557600;
     private float $mercuryYear = 0.2408467;
