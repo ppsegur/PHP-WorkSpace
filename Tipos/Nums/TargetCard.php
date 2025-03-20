@@ -29,7 +29,6 @@ function maskify(string $cc): string
         $cc = substr($cc, 1, -4);
         $cc = preg_replace('/\d/', '#', $cc);
         return $first . $cc . $lastfour;
-
     }
 
       //  throw new \BadFunctionCallException("Implement the maskify function");
