@@ -32,6 +32,7 @@ declare(strict_types=1);
 
 function twoFer(string $name = ''): string
 {
+    //Este if es para validar si el nombre es vacio o nulo 
     if ($name == '' ||  (trim($name) === '') ) {
         return "One for you, one for me.";
     }  else {
