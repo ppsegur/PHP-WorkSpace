@@ -1,6 +1,0 @@
-{
-    "require": {
-        "slim/slim": "^4.14",
-        "robmorgan/phinx": "^0.14.0"
-    }
-}
