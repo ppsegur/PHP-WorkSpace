@@ -19,7 +19,7 @@
     //$date es una fecha a la cual debemos sumarle un gigasegundo
     //Un gigasegundo son mil millones de segundos. Es decir, un uno con nueve ceros después.
     //Para sumar un gigasegundo a una fecha, debemos sumarle 1000000000 segundos
-    //    //throw new \BadFunctionCallException("Implement the from function");
+    //throw new \BadFunctionCallException("Implement the from function");
     return $date->add(new DateInterval('PT1000000000S'));
 
 }
