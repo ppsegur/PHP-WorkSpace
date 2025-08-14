@@ -74,12 +74,31 @@ class TwoBucket{
             $result->litersLeftInOtherBucket = 0;
             return $result;
         }
-        if ($secondarySize === $goal) {
+        // Si el cubo secundario tiene el tamaño exacto del objetivo y se empieza con el cubo uno,
+        // se requieren dos acciones: llenar el cubo uno y transferir al cubo dos
+        if ($secondarySize === $goal && $startBucket === 'one') {
+            $primary = $primarySize;
+            $secondary = 0;
+            $actions = 1;
+            // transferir
+            $primaryAntes = $primary; // Guardamos el valor antes de transferir
+            $transfer = min($primary, $secondarySize - $secondary);
+            $primary -= $transfer;
+            $secondary += $transfer;
+            $actions++;
+            $result = new \stdClass();
+            $result->numberOfActions = $actions;
+            $result->nameOfBucketWithDesiredLiters = 'two';
+            $result->litersLeftInOtherBucket = $primaryAntes;
+            return $result;
+        }
+        // Si se empieza con el cubo dos y su tamaño es el objetivo, solo una acción
+        if ($secondarySize === $goal && $startBucket === 'two') {
             $secondary = $secondarySize;
             $actions = 1;
             $result = new \stdClass();
             $result->numberOfActions = $actions;
-            $result->nameOfBucketWithDesiredLiters = $startBucket === 'one' ? 'two' : 'one';
+            $result->nameOfBucketWithDesiredLiters = 'two';
             $result->litersLeftInOtherBucket = 0;
             return $result;
         }
